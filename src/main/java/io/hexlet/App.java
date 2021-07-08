@@ -22,7 +22,7 @@ public class App {
 
         final var greetingServletName = "greetingServlet";
         tomcat.addServlet(contextPath, greetingServletName, new GreetingServlet());
-        context.addServletMappingDecoded("/add", greetingServletName);
+        context.addServletMappingDecoded("/greeting", greetingServletName);
 
         tomcat.start();
         tomcat.getServer().await();
