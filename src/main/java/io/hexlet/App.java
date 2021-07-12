@@ -11,14 +11,19 @@ public class App {
 
     public static void main(String[] args) throws LifecycleException {
         final var tomcat = new Tomcat();
-        tomcat.setPort(8080);
+
+        String port = System.getenv("PORT");
+        if(port == null || port.isEmpty()) {
+            port = "8080";
+        }
+        tomcat.setPort(Integer.valueOf(port));
 
         final var contextPath = "/";
         final var context = tomcat.addContext(contextPath, new File(".").getAbsolutePath());
 
         final var helloWorldServletName = "helloWorldServlet";
         tomcat.addServlet(contextPath, helloWorldServletName, new HelloWorldServlet());
-        context.addServletMappingDecoded("/hello", helloWorldServletName);
+        context.addServletMappingDecoded("/", helloWorldServletName);
 
         final var greetingServletName = "greetingServlet";
         tomcat.addServlet(contextPath, greetingServletName, new GreetingServlet());

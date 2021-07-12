@@ -1,0 +1,27 @@
+plugins {
+  id 'application'
+}
+
+group = 'io.hexlet'
+version = '1.0-SNAPSHOT'
+
+repositories {
+  mavenCentral()
+}
+
+compileJava {
+  options.release = 16
+}
+
+application {
+  mainClass = 'io.hexlet.App'
+}
+
+dependencies {
+  implementation 'org.apache.tomcat.embed:tomcat-embed-core:8.0.53'
+  implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:8.0.53'
+  implementation 'org.apache.tomcat.embed:tomcat-embed-logging-juli:8.0.53'
+}
+
+task stage(dependsOn: ['clean', 'installDist'])
+installDist.mustRunAfter clean
