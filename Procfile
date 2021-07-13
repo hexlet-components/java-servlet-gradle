@@ -1,1 +1,1 @@
-web: sh build/install/servlet-test/bin/servlet-test
+web: sh build/install/java-servlet-gradle/bin/java-servlet-gradle
