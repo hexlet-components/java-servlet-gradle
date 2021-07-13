@@ -2,4 +2,4 @@ setup:
 	./gradlew install
 
 start:
-	./build/install/servlet-test/bin/servlet-test
+	./build/install/java-servlet-gradle/bin/java-servlet-gradle
