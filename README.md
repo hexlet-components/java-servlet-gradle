@@ -5,7 +5,7 @@
 ### Requirements
 
   * JDK 16
-  * Gradle
+  * Gradle 7
   * GNU Make
 
 ### Setup

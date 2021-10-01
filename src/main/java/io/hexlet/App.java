@@ -16,14 +16,14 @@ public class App {
         if(port == null || port.isEmpty()) {
             port = "8080";
         }
-        tomcat.setPort(Integer.valueOf(port));
+        tomcat.getConnector().setPort(Integer.valueOf(port));
 
         final var contextPath = "/";
         final var context = tomcat.addContext(contextPath, new File(".").getAbsolutePath());
 
         final var helloWorldServletName = "helloWorldServlet";
         tomcat.addServlet(contextPath, helloWorldServletName, new HelloWorldServlet());
-        context.addServletMappingDecoded("/", helloWorldServletName);
+        context.addServletMappingDecoded("", helloWorldServletName);
 
         final var greetingServletName = "greetingServlet";
         tomcat.addServlet(contextPath, greetingServletName, new GreetingServlet());
