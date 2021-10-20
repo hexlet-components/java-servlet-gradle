@@ -2,6 +2,8 @@ plugins {
   id 'application'
   id 'checkstyle'
   id 'com.github.ben-manes.versions' version '0.39.0'
+  id 'com.adarshr.test-logger' version '3.0.0'
+  id 'jacoco'
 }
 
 group = 'io.hexlet'
@@ -20,9 +22,28 @@ application {
 }
 
 dependencies {
-  implementation 'org.apache.tomcat.embed:tomcat-embed-core:10.0.11'
-  implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:10.0.11'
+  implementation 'org.apache.tomcat.embed:tomcat-embed-core:10.0.12'
+  implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:10.0.12'
   implementation 'org.apache.tomcat.embed:tomcat-embed-logging-juli:9.0.0.M6'
+
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+  testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.1'
+  testImplementation 'org.assertj:assertj-core:3.21.0'
+  testImplementation 'com.konghq:unirest-java:3.13.0'
+}
+
+test {
+  useJUnitPlatform()
+}
+
+testlogger {
+  showStandardStreams true
+}
+
+jacocoTestReport {
+  reports {
+    xml.required = true
+  }
 }
 
 checkstyle {

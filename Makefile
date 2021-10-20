@@ -13,6 +13,12 @@ start:
 lint:
 	./gradlew checkstyleMain checkstyleTest
 
+test:
+	./gradlew test
+
+report:
+	./gradlew jacocoTestReport
+
 check-updates:
 	./gradlew dependencyUpdates
 
