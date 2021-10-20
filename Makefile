@@ -4,6 +4,9 @@ install:
 clean:
 	./gradlew clean
 
+build:
+	./gradlew build
+
 start-dist:
 	./build/install/java-servlet-gradle/bin/java-servlet-gradle
 
