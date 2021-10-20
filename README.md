@@ -1,5 +1,9 @@
 # java-servlet-gradle
 
+[![github action status](https://github.com/hexlet-components/java-servlet-gradle/workflows/Java%20CI/badge.svg)](https://github.com/hexlet-components/java-servlet-gradle/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/60efb47cbf193b0a3050/maintainability)](https://codeclimate.com/github/hexlet-components/java-servlet-gradle/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/60efb47cbf193b0a3050/test_coverage)](https://codeclimate.com/github/hexlet-components/java-servlet-gradle/test_coverage)
+
 [Demo on Heroku](https://java-servlet-gradle.herokuapp.com/)
 
 ### Requirements
