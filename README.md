@@ -4,11 +4,11 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/60efb47cbf193b0a3050/maintainability)](https://codeclimate.com/github/hexlet-components/java-servlet-gradle/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/60efb47cbf193b0a3050/test_coverage)](https://codeclimate.com/github/hexlet-components/java-servlet-gradle/test_coverage)
 
-[Demo on Heroku](https://java-servlet-gradle.herokuapp.com/)
+[Demo on Heroku](https://java-servlet-gradle.hexlet.app)
 
 ### Requirements
 
-  * JDK 16
+  * JDK 17
   * Gradle 7
   * GNU Make
 
