@@ -1,9 +1,20 @@
-FROM gradle:7.4.0-jdk17
+FROM eclipse-temurin:20-jdk
 
 WORKDIR /app
 
-COPY . .
+COPY gradle gradle
+COPY build.gradle.kts .
+COPY settings.gradle.kts .
+COPY gradlew .
 
-RUN gradle installDist
+RUN ./gradlew --no-daemon dependencies
 
-CMD build/install/java-servlet-gradle/bin/java-servlet-gradle
+COPY src src
+COPY config config
+
+RUN ./gradlew --no-daemon build
+
+ENV JAVA_OPTS "-Xmx512M -Xms512M"
+EXPOSE 7070
+
+CMD java -jar build/libs/HexletJavalin-1.0-SNAPSHOT-all.jar

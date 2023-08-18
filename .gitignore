@@ -5,3 +5,9 @@
 build
 
 tomcat.*/
+
+bin
+.factorypath
+.settings
+.classpath
+.project

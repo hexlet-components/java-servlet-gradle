@@ -1,3 +1,6 @@
+setup:
+	gradle wrapper --gradle-version 8.3
+
 install:
 	./gradlew install
 
@@ -10,8 +13,8 @@ build:
 start-dist:
 	./build/install/java-servlet-gradle/bin/java-servlet-gradle
 
-start:
-	./gradlew run
+dev:
+	./gradlew appRun
 
 lint:
 	./gradlew checkstyleMain checkstyleTest
@@ -22,7 +25,7 @@ test:
 report:
 	./gradlew jacocoTestReport
 
-check-updates:
+check-deps:
 	./gradlew dependencyUpdates
 
 .PHONY: build

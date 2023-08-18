@@ -8,9 +8,8 @@
 
 ## Requirements
 
-* JDK 17
-* Gradle 7
-* GNU Make
+* JDK 20
+* Make
 
 ## Setup
 
@@ -21,7 +20,7 @@ make setup
 ## Run server
 
 ```bash
-make start
+make dev
 # Open http://localhost:8080
 ```
 
