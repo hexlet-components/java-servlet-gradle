@@ -15,7 +15,7 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.info("TEST");
+        log.info("TEST!");
         resp.setContentType("text/html");
         var writer = resp.getWriter();
         writer.println("<html><body>");
