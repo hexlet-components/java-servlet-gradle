@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 
-@WebServlet(name = "MainServlet", urlPatterns = "/about")
 @Slf4j
+@WebServlet(name = "MainServlet", urlPatterns = "/about")
 public class MainServlet extends HttpServlet {
 
     @Override

@@ -17,6 +17,10 @@ repositories {
 
 dependencies {
     implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
+    implementation("jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0")
+    implementation("org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1")
+
+    // implementation("jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.1")
     // implementation("ch.qos.logback:logback-access:1.4.11")
     implementation("org.slf4j:slf4j-api:2.0.7")
     implementation("org.slf4j:slf4j-simple:2.0.7")
