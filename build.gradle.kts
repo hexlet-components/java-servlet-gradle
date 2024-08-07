@@ -6,7 +6,7 @@ plugins {
     id("war")
     id("org.gretty") version "4.1.0"
     id("checkstyle")
-    id("io.freefair.lombok") version "8.2.2"
+    id("io.freefair.lombok") version "8.4"
     id("com.github.ben-manes.versions") version "0.47.0"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
