@@ -1,5 +1,5 @@
 setup:
-	gradle wrapper --gradle-version 8.3
+	gradle wrapper --gradle-version 8.13
 
 install:
 	./gradlew install
