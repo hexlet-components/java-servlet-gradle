@@ -4,10 +4,10 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 plugins {
     id("java")
     id("war")
-    id("org.gretty") version "4.1.6"
+    id("org.gretty") version "5.0.2"
     id("checkstyle")
-    id("io.freefair.lombok") version "8.13.1"
-    id("com.github.ben-manes.versions") version "0.52.0"
+    id("io.freefair.lombok") version "9.5.0"
+    id("com.github.ben-manes.versions") version "0.54.0"
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
@@ -23,16 +23,16 @@ dependencies {
     implementation("jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.2")
     implementation("org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1")
 
-    implementation("org.slf4j:slf4j-simple:2.0.17")
+    implementation("org.slf4j:slf4j-simple:2.0.18")
 
-    implementation("org.zalando:logbook-core:3.11.0")
-    implementation("org.zalando:logbook-servlet:3.11.0")
+    implementation("org.zalando:logbook-core:4.0.4")
+    implementation("org.zalando:logbook-servlet:4.0.4")
 
-    testImplementation("com.konghq:unirest-java-core:4.4.5")
-    testImplementation("com.konghq:unirest-java-bom:4.4.5")
+    testImplementation("com.konghq:unirest-java-core:4.10.0")
+    testImplementation("com.konghq:unirest-java-bom:4.10.0")
 
-    testImplementation("org.assertj:assertj-core:3.27.3")
-    testImplementation(platform("org.junit:junit-bom:5.12.2"))
+    testImplementation("org.assertj:assertj-core:3.27.7")
+    testImplementation(platform("org.junit:junit-bom:6.1.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
