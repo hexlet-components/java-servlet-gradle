@@ -1,0 +1,40 @@
+[plugins]
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless-plugin" }
+lombok = { id = "io.freefair.lombok", version.ref = "lombok-plugin" }
+versions = { id = "io.github.ben-manes.versions", version.ref = "versions-plugin" }
+version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "catalog-update-plugin" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow-plugin" }
+gretty = { id = "org.gretty", version.ref = "gretty-plugin" }
+
+[versions]
+spotless-plugin = "8.9.0"
+lombok-plugin = "9.5.0"
+versions-plugin = "0.61.0"
+catalog-update-plugin = "1.1.1"
+shadow-plugin = "9.6.1"
+gretty-plugin = "5.0.2"
+jakarta-servlet-api = "6.1.0"
+jakarta-jstl-api = "3.0.2"
+glassfish-jstl = "3.0.1"
+slf4j = "2.0.18"
+logbook = "3.11.0"
+unirest = "4.10.1"
+assertj = "3.27.7"
+junit-bom = "6.1.3"
+
+[libraries]
+# Servlet
+jakartaServletApi = { module = "jakarta.servlet:jakarta.servlet-api", version.ref = "jakarta-servlet-api" }
+jakartaJstlApi = { module = "jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api", version.ref = "jakarta-jstl-api" }
+glassfishJstl = { module = "org.glassfish.web:jakarta.servlet.jsp.jstl", version.ref = "glassfish-jstl" }
+# Logging
+slf4jSimple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+logbookCore = { module = "org.zalando:logbook-core", version.ref = "logbook" }
+logbookServlet = { module = "org.zalando:logbook-servlet", version.ref = "logbook" }
+# Tests
+unirestJavaCore = { module = "com.konghq:unirest-java-core", version.ref = "unirest" }
+unirestJavaBom = { module = "com.konghq:unirest-java-bom", version.ref = "unirest" }
+assertjCore = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+junitBom = { module = "org.junit:junit-bom", version.ref = "junit-bom" }
+junitJupiter = { module = "org.junit.jupiter:junit-jupiter" }
+junitPlatformLauncher = { module = "org.junit.platform:junit-platform-launcher" }

@@ -17,7 +17,10 @@ dev:
 	./gradlew appRun
 
 lint:
-	./gradlew checkstyleMain checkstyleTest
+	./gradlew spotlessCheck
+
+lint-fix:
+	./gradlew spotlessApply
 
 test:
 	./gradlew test

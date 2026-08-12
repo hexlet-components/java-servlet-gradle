@@ -4,11 +4,12 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 plugins {
     id("java")
     id("war")
-    id("org.gretty") version "4.1.6"
-    id("checkstyle")
-    id("io.freefair.lombok") version "8.13.1"
-    id("com.github.ben-manes.versions") version "0.52.0"
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    alias(libs.plugins.gretty)
+    alias(libs.plugins.spotless)
+    alias(libs.plugins.lombok)
+    alias(libs.plugins.versions)
+    alias(libs.plugins.version.catalog.update)
+    alias(libs.plugins.shadow)
 }
 
 group = "io.hexlet"
@@ -19,27 +20,27 @@ repositories {
 }
 
 dependencies {
-    implementation("jakarta.servlet:jakarta.servlet-api:6.1.0")
-    implementation("jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.2")
-    implementation("org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1")
+    implementation(libs.jakartaServletApi)
+    implementation(libs.jakartaJstlApi)
+    implementation(libs.glassfishJstl)
 
-    implementation("org.slf4j:slf4j-simple:2.0.17")
+    implementation(libs.slf4jSimple)
 
-    implementation("org.zalando:logbook-core:3.11.0")
-    implementation("org.zalando:logbook-servlet:3.11.0")
+    implementation(libs.logbookCore)
+    implementation(libs.logbookServlet)
 
-    testImplementation("com.konghq:unirest-java-core:4.4.5")
-    testImplementation("com.konghq:unirest-java-bom:4.4.5")
+    testImplementation(libs.unirestJavaCore)
+    testImplementation(libs.unirestJavaBom)
 
-    testImplementation("org.assertj:assertj-core:3.27.3")
-    testImplementation(platform("org.junit:junit-bom:5.12.2"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testImplementation(libs.assertjCore)
+    testImplementation(platform(libs.junitBom))
+    testImplementation(libs.junitJupiter)
+    testRuntimeOnly(libs.junitPlatformLauncher)
 }
 
 gretty {
     integrationTestTask = "test"
-    contextPath = '/'
+    contextPath = "/"
     servletContainer = "tomcat10"
 }
 
@@ -53,4 +54,22 @@ tasks.test {
         // showCauses = true
         showStandardStreams = true
     }
+}
+
+spotless {
+    java {
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat().aosp()
+        formatAnnotations()
+        leadingTabsToSpaces(4)
+        endWithNewline()
+    }
+}
+
+// versionCatalogUpdate пишет свежие версии прямо в gradle/libs.versions.toml,
+// поэтому руками их сверять не нужно. Ключи не сортируются: порядок в каталоге
+// смысловой, по группам зависимостей.
+versionCatalogUpdate {
+    sortByKey = false
 }
