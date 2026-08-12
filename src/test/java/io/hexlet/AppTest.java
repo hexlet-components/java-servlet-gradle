@@ -2,10 +2,9 @@ package io.hexlet;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import kong.unirest.core.Unirest;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import kong.unirest.core.Unirest;
 
 class AppTest {
     static String baseUrl;
