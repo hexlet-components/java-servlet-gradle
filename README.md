@@ -8,8 +8,8 @@
 
 ## Requirements
 
-* JDK 21
-* Make
+- JDK 21
+- Make
 
 ## Setup
 
