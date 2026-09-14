@@ -7,7 +7,7 @@ shadow = { id = "com.gradleup.shadow", version.ref = "shadow-plugin" }
 gretty = { id = "org.gretty", version.ref = "gretty-plugin" }
 
 [versions]
-spotless-plugin = "8.10.1"
+spotless-plugin = "8.10.2"
 lombok-plugin = "9.5.0"
 versions-plugin = "0.61.0"
 catalog-update-plugin = "1.1.1"
@@ -16,7 +16,7 @@ gretty-plugin = "5.0.2"
 jakarta-servlet-api = "6.1.0"
 jakarta-jstl-api = "3.0.2"
 glassfish-jstl = "3.0.1"
-slf4j = "2.0.18"
+slf4j = "2.0.19"
 logbook = "4.1.0"
 unirest = "4.10.1"
 assertj = "3.27.7"
