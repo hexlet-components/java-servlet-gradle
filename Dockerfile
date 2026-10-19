@@ -1,4 +1,4 @@
-FROM eclipse-temurin:25-jdk
+FROM eclipse-temurin:27-jdk
 
 WORKDIR /app
 
@@ -10,7 +10,6 @@ COPY gradlew .
 RUN ./gradlew --no-daemon dependencies
 
 COPY src src
-COPY config config
 
 RUN ./gradlew --no-daemon build
 

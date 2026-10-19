@@ -8,7 +8,7 @@
 
 ## Requirements
 
-- JDK 21
+- JDK 27
 - Make
 
 ## Setup
